@@ -72,7 +72,7 @@ public class AuthController {
 
     @PostMapping("login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> request){
-        String pseudo = request.get("email");
+        String pseudo = request.get("pseudo");
         String password = request.get("password");
         Optional<User> user = userService.getUSerByPseudo(pseudo);
         if (user.isEmpty())

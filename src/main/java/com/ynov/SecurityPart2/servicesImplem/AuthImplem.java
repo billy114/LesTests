@@ -20,7 +20,7 @@ public class AuthImplem implements AuthService {
 
     @Override
     public String login(User user, String password) {
-        if(bCryptPasswordEncoder.matches( user.getPassword(), password))
+        if(bCryptPasswordEncoder.matches(password, user.getPassword()))
             return jwtService.generateToken(user);
         return null;
     }
