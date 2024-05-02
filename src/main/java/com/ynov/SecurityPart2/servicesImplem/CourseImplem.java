@@ -7,11 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CourseImplem implements CourseService {
     @Autowired
     CourseRepo courseRepo;
+
+    @Override
+    public Optional<Course> getCourseById (Long id){
+        return courseRepo.findById(id);
+    }
 
     @Override
     public List<Course> getAllCourses() {

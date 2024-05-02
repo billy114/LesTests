@@ -12,6 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
+@Table (name = "users")
 @Data
 @NoArgsConstructor
 public class User implements UserDetails {

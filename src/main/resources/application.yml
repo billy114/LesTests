@@ -2,7 +2,7 @@ spring:
   application:
     name: SecurityPart2
   datasource:
-    url: jdbc:mysql://localhost:8889/security-2
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:8889/security-2}
     username: root
     password: root
 
